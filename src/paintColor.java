@@ -10,12 +10,12 @@ public class paintColor extends CarOptions
         {
             System.out.println("paintColor Constructor\n");
 
-            Color = "Whatever Color makes you happy";
+            Color = "whatever color makes you happy";
         }
 
         @Override
         public String GetDescription()
         {
-            return super.GetDescription() + " with " + Color + " color";
+            return super.GetDescription() + " with " + Color;
         }
 }
