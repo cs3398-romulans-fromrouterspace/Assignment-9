@@ -6,11 +6,11 @@ public class paintColor extends CarOptions
         public String Color;
 
 
-        public PaintedCarWithSuperCharger(String color)
+        public paintColor()
         {
-            System.out.println(" paintColor Constructor\n");
+            System.out.println("paintColor Constructor\n");
 
-            Color = color;
+            Color = "Whatever Color makes you happy";
         }
 
         @Override
