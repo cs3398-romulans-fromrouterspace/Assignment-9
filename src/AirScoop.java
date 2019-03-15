@@ -5,14 +5,14 @@ public class AirScoop extends CarOptions {
 	public String AirScoop;
 
 	public AirScoop(){
-		System.out.println(" AirScoop Constructor\n");
-		AirScoop = "AirScoop";
+		System.out.println("AirScoop Constructor\n");
+		AirScoop = "Air Scoop";
 
 	}
 
 	@Override
 	public String GetDescription() {
-		return super.GetDescription() + " with" + AirScoop;
+		return super.GetDescription() + " with " + AirScoop;
 	}
 
 }

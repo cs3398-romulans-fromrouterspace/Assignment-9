@@ -6,7 +6,7 @@ public class CarMain {
 
 	public static void main(String[] args) {
 
-		System.out.println("Starting:  Creating Cars without Decorator Pattern\n");
+		System.out.println("Starting:  Creating Cars with Decorator Pattern\n");
 
 		System.out.println("Make a Supercharged Car:");
 		ICar SuperCharger = new SuperCharger();
@@ -16,11 +16,11 @@ public class CarMain {
 		ICar paintColor = new paintColor();
 		System.out.println("Done. Here is your car: " + paintColor.GetDescription());
 
-		System.out.println("\nMake a with Sports Wheels:");
+		System.out.println("\nMake a car with Sports Wheels:");
 		ICar SportsWheels = new SportWheels();
 		System.out.println("Done. Here is your car: " + SportsWheels.GetDescription());
 
-		System.out.println("\nMake a with a Air Scoop:");
+		System.out.println("\nMake a car with an Air Scoop:");
 		ICar AirScoop = new AirScoop();
 		System.out.println("Done. Here is your car: " + AirScoop.GetDescription());
 

@@ -13,7 +13,7 @@ package carcraft;
 
 public class CarOptions implements ICar{
 
-	public String desc = "Base model.";
+	public String desc = "Base model";
 
 	public CarOptions(){
 		System.out.println("Abstract CarOptions Constructor - no modifications yet.");
