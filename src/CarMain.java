@@ -6,31 +6,39 @@ public class CarMain {
 
 	public static void main(String[] args) {
 
-		System.out.println("Starting:  Creating Cars with Decorator Pattern\n");
+		System.out.println("\n--------------------------------------------------------------------------------------");
+		System.out.println("WELCOME TO THE CAR-BERNATOR 2000");
+		System.out.println("Initiating automated car manufacturing plant...");
+		System.out.println("Androids booted.");
 
-		System.out.println("Make a Supercharged Car:");
-		ICar SuperCharger = new SuperCharger();
-		System.out.println("Done. Here is your car: " + SuperCharger.GetDescription());
+		System.out.println("\nMake a base model.");
+		ICar cheapCar = new BasicCar();
+		System.out.println("\tDone.  Here is your car:");
+		System.out.println("\t" + cheapCar.GetDescription());
 
-		System.out.println("\nMake a Painted Car:");
-		ICar paintColor = new paintColor();
-		System.out.println("Done. Here is your car: " + paintColor.GetDescription());
+		System.out.println("\nMake a supercharged car.");
+		ICar carMod = new SuperCharger(new BasicCar());
+		System.out.println("\tDone. Here is your car: ");
+		System.out.println("\t" + carMod.GetDescription());
 
-		System.out.println("\nMake a car with Sports Wheels:");
-		ICar SportsWheels = new SportWheels();
-		System.out.println("Done. Here is your car: " + SportsWheels.GetDescription());
+		System.out.println("\nMake a painted, supercharged car.");
+		ICar fancyCar = new paintColor(new SuperCharger(new BasicCar()));
+		System.out.println("\tDone.  Here is your car: ");
+		System.out.println("\t" + fancyCar.GetDescription());
 
-		System.out.println("\nMake a car with an Air Scoop:");
-		ICar AirScoop = new AirScoop();
-		System.out.println("Done. Here is your car: " + AirScoop.GetDescription());
+		System.out.println("\nMake a airscooped, sports-wheeled car.");
+		fancyCar = new BasicCar();
+		fancyCar = new SportWheels(new AirScoop(fancyCar));
+		System.out.println("\tDone.  Here is your car: ");
+		System.out.println("\t" + fancyCar.GetDescription());	
 
-		System.out.println("\nMake a basic car:");
-		ICar BasicCar = new BasicCar();
-		System.out.println("Done. Here is your car: " + BasicCar.GetDescription());
+		System.out.println("\nMake a car with EVERYTHING.");
+		fancyCar = new BasicCar();
+		fancyCar = new SuperCharger(new SportWheels(new paintColor(new AirScoop(fancyCar))));
+		System.out.println("\tDone.  Here is your car: ");
+		System.out.println("\t" + fancyCar.GetDescription());
 
-		System.out.println("\nMake a basic car with options");
-		ICar CarOptions = new CarOptions();
-		System.out.println("Done. Here is your car: " + CarOptions.GetDescription());
+	System.out.println("\n--------------------------------------------------------------------------------------\n");
 	}
 
 }
