@@ -32,6 +32,12 @@ public class CarMain {
 		System.out.println("\tDone.  Here is your car: ");
 		System.out.println("\t" + fancyCar.GetDescription());	
 
+		System.out.println("\nMake a painted, airscooped, sports-wheeled car.");
+		fancyCar = new BasicCar();
+		fancyCar = new paintColor(new SportWheels(new AirScoop(fancyCar)));
+		System.out.println("\tDone.  Here is your car: ");
+		System.out.println("\t" + fancyCar.GetDescription());	
+
 		System.out.println("\nMake a car with EVERYTHING.");
 		fancyCar = new BasicCar();
 		fancyCar = new SuperCharger(new SportWheels(new paintColor(new AirScoop(fancyCar))));
