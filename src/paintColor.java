@@ -3,19 +3,13 @@ package carcraft;
 
 public class paintColor extends CarOptions
 {
-        public String Color;
-
-
-        public paintColor()
+        public paintColor(ICar carMod)
         {
-            System.out.println("paintColor Constructor\n");
-
-            Color = "whatever color makes you happy";
+           super(carMod);
         }
 
-        @Override
         public String GetDescription()
         {
-            return super.GetDescription() + " with " + Color;
+            return carMod.GetDescription() + " -> whatever color makes you happy";
         }
 }

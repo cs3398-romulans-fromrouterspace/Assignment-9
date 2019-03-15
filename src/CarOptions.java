@@ -11,17 +11,15 @@
 
 package carcraft;
 
-public class CarOptions implements ICar{
+abstract class CarOptions implements ICar{
 
-	public String desc = "Base model";
+	protected ICar carMod;
 
-	public CarOptions(){
-		System.out.println("Abstract CarOptions Constructor - no modifications yet.");
+	public CarOptions(ICar carMod){
+		this.carMod = carMod;
 	}
 
-	@Override
 	public String GetDescription(){
-		return desc;
+		return carMod.GetDescription();
 	}
-
 }

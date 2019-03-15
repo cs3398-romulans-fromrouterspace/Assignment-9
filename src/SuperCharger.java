@@ -3,18 +3,13 @@ package carcraft;
 
 public class SuperCharger extends CarOptions
 {
-        public String SuperCharger;
-
-
-        public SuperCharger()
+        public SuperCharger(ICar carMod)
         {
-            System.out.println("Super Charger Constructor\n");
-            SuperCharger = " Super Charged!";
+            super(carMod);
         }
 
-        @Override
         public String GetDescription()
         {
-            return super.GetDescription() + SuperCharger;
+            return carMod.GetDescription() + " -> supercharger";
         }
 }
